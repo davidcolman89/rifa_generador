@@ -1,0 +1,6 @@
+rifa:
+  build: .
+  volumes:
+    - ./:/app
+  ports:
+    - "8888:80"

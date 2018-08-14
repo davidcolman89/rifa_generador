@@ -13,7 +13,7 @@ $rifa = <<<HTML
             color: #000000;
             background-color: transparent;
             position:absolute;
-            top:83%;
+            top:85%;
         }
 
         .numero1 {
@@ -28,14 +28,14 @@ $rifa = <<<HTML
             color: grey;
             background-color: transparent;
             position:absolute;
-            top:88%;
+            top:91%;
         }
         
         .hash1{
-            left: 13%;
+            left: 11%;
         } 
         .hash2 {
-            left: 64%;
+            left: 63%;
         }
         
     </style>
@@ -43,7 +43,7 @@ $rifa = <<<HTML
 <body>
 
 <div class="content">
-    <img src="rifa.png" width="100%" >
+    <img src="20180814.rifa.png" width="100%" >
     <div class="numero numero1">{{NUM}}</div>
     <div class="numero numero2">{{NUM}}</div>
     <div class="hash hash1">{{HASH}}</div>
@@ -55,8 +55,8 @@ $rifa = <<<HTML
 </html>
 HTML;
 
-$total = 1000;
-for($i=1; $i<= $total; $i++) {
+$total = 2000;
+for($i=1001; $i<= $total; $i++) {
     $aux = $rifa;
     $replace = str_pad($i, 4, '0', STR_PAD_LEFT);
     $aux = str_replace("{{NUM}}",$replace, $aux);
